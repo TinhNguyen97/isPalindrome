@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>isPalindrome</title>
+</head>
+<body>
+<script>
+    let chuoi = prompt("nhập từ cần kiểm tra:")
+    let kytu = chuoi.split("")
+    document.write(isPalindrome(kytu))
+
+    function isPalindrome(arr) {
+        let j = arr.length - 1
+        let index = -1
+        for (let i = 0; i <=j; i++) {
+            if (arr[i] === arr[j]) {
+                arr.shift()
+                arr.pop()
+            }
+        }
+        if (arr.length == 0 || arr.length == 1)
+        return 'từ bạn vừa nhập là từ đối xứng'
+    }
+</script>
+</body>
+</html>
